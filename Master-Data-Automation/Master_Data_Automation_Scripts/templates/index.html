@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Master Data Cleaner</title>
+    <link rel="icon" href="static/images/favicon.png" type="image/png">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script src="{{ url_for('static', filename='script.js') }}" defer></script> <!-- Link to JavaScript file -->
+</head>
+<body>
+    
+    <h1>Automated Master Data Cleaner for Effective Data Integration to SAP TM</h1>
+
+
+    <main>
+        <!-- Section 1 -->
+        <section id="section1">
+            <h2>(Excel Cleaner)</h2>
+        </section>
+  
+    <form id="uploadForm" action="{{ url_for('upload_file') }}" method="post" enctype="multipart/form-data" class="w-93">
+        <input type="file" id="fileInput" name="file" accept=".xlsx, .csv">
+        <input type="submit" id="cleanButton" value="Clean Data" accept=".xlsx, .csv">
+    </form>
+  
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 Radiant Logistics Corp</p>
+        <img src="{{ url_for('static', filename='images/logo1.png') }}" id="logo1.png">
+    </footer>
+    
+
+    
+
+</body>
+</html>

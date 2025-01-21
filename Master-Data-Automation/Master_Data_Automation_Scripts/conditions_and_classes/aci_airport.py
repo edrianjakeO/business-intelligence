@@ -45,7 +45,7 @@ class ACIAirport:
                 str(row['COUNTRY']).strip().upper(), 
                 str(row['STATE']).strip().upper() 
             ) if pd.notnull(row['POSTALCODE']) and pd.notnull(row['COUNTRY']) and pd.notnull(row['STATE'])
-            else row['ACI_AIRPORT'],  # Return the existing value if any of the fields are null
+            else row['ACI_AIRPORT'],  
             axis=1
         )
 
