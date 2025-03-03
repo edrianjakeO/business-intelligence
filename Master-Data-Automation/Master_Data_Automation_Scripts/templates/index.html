@@ -10,28 +10,36 @@
 </head>
 <body>
     
-    <h1>Automated Master Data Cleaner for Effective Data Integration to SAP TM</h1>
-
+    <div class="header">
+        <h1>AUTOMATED MASTER DATA CLEANER FOR EFFECTIVE DATA INTEGRATION TO SAP TM</h1>
+    </div>
 
     <main>
-        <!-- Section 1 -->
+    <div class="glass container">
         <section id="section1">
-            <h2>(Excel Cleaner)</h2>
+            <h2>MASTER DATA CLEANER</h2>
         </section>
-  
-    <form id="uploadForm" action="{{ url_for('upload_file') }}" method="post" enctype="multipart/form-data" class="w-93">
-        <input type="file" id="fileInput" name="file" accept=".xlsx, .csv">
-        <input type="submit" id="cleanButton" value="Clean Data" accept=".xlsx, .csv">
-    </form>
-  
+        
 
-    <!-- Footer Section -->
-    <footer>
-        <p>&copy; 2024 Radiant Logistics Corp</p>
-        <img src="{{ url_for('static', filename='images/logo1.png') }}" id="logo1.png">
-    </footer>
-    
+        <form id="uploadForm" action="{{ url_for('upload_file') }}" method="post" enctype="multipart/form-data" class="w-93">
+            <input type="file" id="fileInput" name="file" accept=".xlsx">
+            <input type="submit" id="cleanButton" value="Clean Master Data" accept=".xlsx">
+        
+        <div class="download-section">
+            <p>Download Cleaned Master Data:</p>
+            <a href="static/files/sample.xlsx" download class="download-btn">Download Cleaned Master Data</a>
+        </div>
+            
+        </form>
+    </div>
 
+    <div class="sticky">
+        <footer>
+            <p>&copy; 2024 Radiant Logistics Inc</p>
+            <img src="{{ url_for('static', filename='images/logo1.png') }}" id="logo1">
+        </footer>
+    </div>
+  
     
 
 </body>
