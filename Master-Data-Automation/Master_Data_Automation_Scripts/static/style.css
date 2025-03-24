@@ -1,124 +1,77 @@
-* {
-    box-sizing: border-box;
-    text-align: center;
-    background-image: radial-gradient( circle 341px at 10% 20%,  rgba(132,94,194,1) 0%, rgba(196,243,251,1) 90% );
-}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
 
-h1 {
-    /* outline: 8px ridge rgba(241, 243, 243, 0.774); */
-    width: 93%;
-    margin: 50px;
-    padding: 20px;
-    background: linear-gradient(90deg, #e3ffe7 0%, #d9e7ff 100%);
-    text-align: center;
-    border:none;
-    /* padding-bottom: 0%; */
-    border-radius: 25px;
-    background-color:aliceblue;  
-}
-
-h2{
-    font-size: medium;
-    font: caption;  
-    font-variant-caps: small-caps;
-    border-radius: 50%;
+body {
+    background-color: #f0f4f8;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #333;
 }
 
 .container {
-    /* display: flex; */
-    /* justify-content: center; */
-    /* align-items: center; */
-    position: absolute;
-    top: 250px; 
-    left: 800px;
-    border-radius: 50px;
-    padding: 50px;
-    padding-top: 30px;
-    padding-bottom: 100px;
-    /* background-color:aliceblue;  */
+    background-color: white;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 500px;
+    width: 90%;
+    margin-left: 30px;
+
 }
 
-input {
-    display: block;
-    margin: 0 auto;
-    margin-bottom: 20px;
-    background-color: bisque;
-    border: 1px;
-    border-radius: 25px;
-    padding: 10px 20px;
+h1 {
+    margin-bottom: 10px;
+    margin-left: 10px;
+    font-weight: 600;
+    font-size: 24px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+input[type="file"] {
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    background-color: #f9fafb;
     cursor: pointer;
-    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3), -3px -3px 5px rgba(255, 255, 255, 0.6); /* 3D effect */
-    transition: all 0.5s ease; /* Smooth transition for hover effect */
-    
 }
 
-input:active {
-    box-shadow: inset 3px 3px 5px rgba(0, 0, 0, 0.3), inset -3px -3px 5px rgba(255, 255, 255, 0.6); /* Darker 3D effect when pressed */
+button {
+    padding: 12px 25px;
+    border: none;
+    border-radius: 50px;
+    background-color: #007BFF;
+    color: white;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0, 123, 255, 0.4);
 }
 
-/* h1:hover{
-    background-color: rgb(175, 236, 216);
-    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3), -3px -3px 5px rgba(255, 255, 255, 0.6); /* 3D effect */
-    /* transition: all 0.5s ease; Smooth transition for hover effect */
-
-
-input:hover {
-    background-color: aquamarine;
+button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
 }
 
-.header {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    text-align: center;
-    padding: 5px;
-}
-
-
-.sticky {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    text-align: center;
-    padding: 5px;
-}
-
-
-
-
-img {
-    width: 100px;
-    height: auto;
-    opacity: 100%;
-    
-    
-}
-
-.glass {
-    background: rgba(255, 255, 255, 0.21);
-    border-radius: 16px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
-    border: 1px solid rgba(255, 255, 255, 0.3);
-}
-
-
-@keyframes rotate {
-    0% {
-      transform: rotate(0deg);
+@media (max-width: 600px) {
+    .container {
+        padding: 25px;
     }
-    100% {
-      transform: rotate(360deg);
+
+    h1 {
+        font-size: 20px;
     }
-  }
-  
-  @keyframes rotate {
-    0% {
-        transform: rotate(0deg);
-    }
-    100% {
-        transform: rotate(360deg);
+
+    button {
+        width: 100%;
     }
 }
-
